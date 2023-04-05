@@ -8,7 +8,7 @@ const BookItem = ({ book }) => {
   return (
     <li>
       <div className="bookItem">
-        <label htmlFor={book.id}>
+        <label htmlFor={book.item_id}>
           {book.title}
           <br />
           {book.author}
@@ -20,7 +20,7 @@ const BookItem = ({ book }) => {
         <button
           type="button"
           className="btn btn-delete"
-          onClick={() => dispatch(removeBook(book.id))}
+          onClick={() => dispatch(removeBook(book.item_id))}
         >
           Remove
         </button>
@@ -32,8 +32,12 @@ const BookItem = ({ book }) => {
   );
 };
 
-BookItem.propTypes = {
-  book: PropTypes.objectOf(PropTypes.string).isRequired,
+BookItem.proptypes = {
+  book: PropTypes.shape({
+    item_id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+  }).isRequired,
 };
 
 export default BookItem;

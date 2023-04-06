@@ -3,8 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { postBook, addBook } from '../redux/books/booksSlice';
 
-
-
 const Books = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
@@ -12,18 +10,18 @@ const Books = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-        const book = {
+    const book = {
       item_id: uuidv4(),
       title,
       author,
-      category: 'Fiction'
+      category: 'Fiction',
     };
     dispatch(postBook(book))
-    .then(() => {
-      dispatch(addBook(book))
-    setTitle('');
-    setAuthor('');
-  });
+      .then(() => {
+        dispatch(addBook(book));
+        setTitle('');
+        setAuthor('');
+      });
   };
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 const BookItem = ({ book }) => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const BookItem = ({ book }) => {
         <button
           type="button"
           className="btn btn-delete"
-          onClick={() => dispatch(removeBook(book.item_id))}
+          onClick={() => { dispatch(deleteBook(book.item_id)); }}
         >
           Remove
         </button>
@@ -32,7 +32,7 @@ const BookItem = ({ book }) => {
   );
 };
 
-BookItem.proptypes = {
+BookItem.propTypes = {
   book: PropTypes.shape({
     item_id: PropTypes.string,
     title: PropTypes.string,

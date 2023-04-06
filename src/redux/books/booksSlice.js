@@ -59,7 +59,6 @@ const booksSlice = createSlice({
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
       const bookList = action.payload;
       const newBookList = [];
-      console.log(Object.keys(bookList))
       Object.keys(bookList).forEach((book) => newBookList.push({
         item_id: book,
         title: bookList[book][0].title,
@@ -73,32 +72,32 @@ const booksSlice = createSlice({
     });
     builder.addCase(fetchBooks.rejected, (state) => ({
       ...state,
-      isLoading : false,
-      isError : true
+      isLoading: false,
+      isError: true,
     }));
     builder.addCase(postBook.pending, (state) => ({
       ...state,
-      isError : false
+      isError: false,
     }));
     builder.addCase(postBook.fulfilled, (state) => ({
       ...state,
-      isError : false
+      isError: false,
     }));
     builder.addCase(postBook.rejected, (state) => ({
       ...state,
-      isError : true
+      isError: true,
     }));
     builder.addCase(deleteBook.pending, (state) => ({
       ...state,
-      ifSuccess : false
+      ifSuccess: false,
     }));
     builder.addCase(deleteBook.fulfilled, (state) => ({
       ...state,
-      ifSuccess : true
-    }));)
+      ifSuccess: true,
+    }));
     builder.addCase(deleteBook.rejected, (state) => ({
       ...state,
-      ifSuccess : false
+      ifSuccess: false,
     }));
   },
 });

@@ -71,28 +71,35 @@ const booksSlice = createSlice({
         isLoading: false,
       });
     });
-    builder.addCase(fetchBooks.rejected, (state) => {
-      state.isLoading = false;
-      state.isError = true;
-    });
-    builder.addCase(postBook.pending, (state) => {
-      state.isError = false;
-    });
-    builder.addCase(postBook.fulfilled, (state) => {
-      state.isError = false;
-    });
-    builder.addCase(postBook.rejected, (state) => {
-      state.isError = true;
-    });
-    builder.addCase(deleteBook.pending, (state) => {
-      state.ifSuccess = false;
-    });
-    builder.addCase(deleteBook.fulfilled, (state) => {
-      state.ifSuccess = true;
-    });
-    builder.addCase(deleteBook.rejected, (state) => {
-      state.ifSuccess = false;
-    });
+    builder.addCase(fetchBooks.rejected, (state) => ({
+      ...state,
+      isLoading : false,
+      isError : true
+    }));
+    builder.addCase(postBook.pending, (state) => ({
+      ...state,
+      isError : false
+    }));
+    builder.addCase(postBook.fulfilled, (state) => ({
+      ...state,
+      isError : false
+    }));
+    builder.addCase(postBook.rejected, (state) => ({
+      ...state,
+      isError : true
+    }));
+    builder.addCase(deleteBook.pending, (state) => ({
+      ...state,
+      ifSuccess : false
+    }));
+    builder.addCase(deleteBook.fulfilled, (state) => ({
+      ...state,
+      ifSuccess : true
+    }));)
+    builder.addCase(deleteBook.rejected, (state) => ({
+      ...state,
+      ifSuccess : false
+    }));
   },
 });
 

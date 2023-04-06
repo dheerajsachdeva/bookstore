@@ -26,12 +26,12 @@ const Books = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} method="Post">
+      <form className="form" onSubmit={handleSubmit} method="Post">
         <h2>ADD NEW BOOK</h2>
         <br />
-        <input onChange={(e) => { setTitle(e.target.value); }} type="text" placeholder="Book Title" value={title} required />
-        <input onChange={(e) => { setAuthor(e.target.value); }} type="text" placeholder="Author" value={author} required />
-        <button className="button" type="submit">Add Book</button>
+        <input className="input-title" onChange={(e) => { setTitle(e.target.value); }} type="text" placeholder="Book Title" value={title} required />
+        <input className="input-author" onChange={(e) => { setAuthor(e.target.value); }} type="text" placeholder="Author" value={author} required />
+        <button className="button addButton" type="submit">Add Book</button>
       </form>
     </div>
   );

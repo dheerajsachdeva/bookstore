@@ -4,6 +4,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
 }
 
 :root {
@@ -31,7 +36,6 @@
 }
 
 .navbar {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 5.938rem;
@@ -39,20 +43,11 @@
   background-color: var(--white-two);
 }
 
-.section1 {
-  display: flex;
-}
-
 .heading {
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   padding-right: 2.938rem;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--azure);
 }
 
@@ -65,14 +60,9 @@
   text-decoration: none;
   margin-right: 2rem;
   opacity: 0.5;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  color: var(--black);
 }
 
 .active {
@@ -92,7 +82,6 @@
   border-radius: 4px;
   border: solid 1px var(--e8);
   background-color: var(--white-two);
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -101,11 +90,8 @@
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
-  color: #121212;
+  color: var(--black);
 }
 
 .buttons > button {
@@ -115,10 +101,6 @@
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--cool-blue);
   cursor: pointer;
   margin-top: 1rem;
@@ -135,14 +117,9 @@
   color: var(--cool-blue);
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .oval-progress {
-  display: flex;
   align-items: center;
 }
 
@@ -153,43 +130,28 @@
 }
 
 .book-progress {
-  display: flex;
   align-items: center;
 }
 
 .text-progress {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .percent-completed {
   margin: 0.063rem 5.75rem 0 0.688rem;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 2rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #121212;
+  color: var(--black);
 }
 
 .completed-text {
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #121212;
+  color: var(--black);
 }
 
 .chapter {
-  display: flex;
   flex-direction: column;
 }
 
@@ -202,9 +164,6 @@
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--white-two);
@@ -217,23 +176,15 @@
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #121212;
+  color: var(--black);
 }
 
 .current-lesson {
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   font-size: 1rem;
-  color: #121212;
+  color: var(--black);
   opacity: 1;
 }
 
@@ -244,12 +195,8 @@
 
 .form h2 {
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
 }
@@ -261,12 +208,7 @@
   border-radius: 4px;
   border: solid 1px var(--e8);
   background-color: var(--white-two);
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.15px;
 }
 
@@ -283,9 +225,6 @@
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--white-two);

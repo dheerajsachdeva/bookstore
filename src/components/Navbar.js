@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 
 const Navbar = () => (
-  <div className="navbar">
-    <div className="section1">
+  <div className="flex navbar">
+    <div className="flex section1">
       <div className="heading">BookStore CMS</div>
       <div>
         <ul>

@@ -16,7 +16,7 @@ const BookItem = ({ book }) => {
     }
   };
   return (
-    <li>
+    <li className="flex">
       <div className="bookItem">
         <h2 className="title">{book.title}</h2>
         <span className="author">{book.author}</span>
@@ -36,13 +36,13 @@ const BookItem = ({ book }) => {
           </button>
         </div>
       </div>
-      <div className="book-progress">
-        <div className="oval-progress">
+      <div className="flex book-progress">
+        <div className="flex oval-progress">
           <CircularProgressbar
             className="oval"
             value={percentage}
           />
-          <div className="text-progress">
+          <div className="flex text-progress">
             <span className="percent-completed">
               {percentage}
               %
@@ -50,7 +50,7 @@ const BookItem = ({ book }) => {
             <span className="completed-text">Completed</span>
           </div>
         </div>
-        <div className="chapter">
+        <div className="flex chapter">
           <span className="current-chapter">
             CURRENT CHAPTER
           </span>

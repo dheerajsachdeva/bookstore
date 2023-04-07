@@ -1,4 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300;500;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --z: #fafafa;
+  --medium-blue: #307bbe;
+  --cool-blue: #4386bf;
+  --white-two: #fff;
+  --azure: #0290ff;
+  --e8: #e8e8e8;
+}
+
+.App {
+  width: 100%;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--z);
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  background-color: var(--white-two);
+}
+
+.heading {
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  padding-right: 2.938rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--azure);
+}
+
+.navbar ul {
+  padding-top: 2rem;
+}
+
+.links {
+  padding: 1.438rem;
+  text-decoration: none;
+  margin-right: 2rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  color: var(--black);
+}
+
+.active {
+  opacity: 1;
+}
+
+.profile {
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  width: 2.813rem;
+  height: 2.813rem;
+  color: var(--azure);
+}
+
+.bookList > li {
+  margin: 2% 6% 0;
+  padding: 2% 9.188% 1.625% 1.688%;
+  border-radius: 4px;
+  border: solid 1px var(--e8);
+  background-color: var(--white-two);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black);
+}
+
+.buttons > button {
+  border: none;
+  background-color: var(--white-two);
+  margin-right: 0.938rem;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--cool-blue);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.buttons > button:not(:last-child) {
+  padding-right: 15px;
+  border-right: solid 0.125rem var(--pale-grey);
+}
+
+.author {
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  color: var(--cool-blue);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.oval-progress {
+  align-items: center;
+}
+
+.oval {
+  width: 4.25rem;
+  height: 4.25rem;
+  color: var(--medium-blue);
+}
+
+.book-progress {
+  align-items: center;
+}
+
+.text-progress {
+  flex-direction: column;
+  align-items: center;
+}
+
+.percent-completed {
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.completed-text {
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: var(--black);
+}
+
+.chapter {
+  flex-direction: column;
+}
+
+.update-progress {
+  margin: 0.75rem 1.75rem 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--azure);
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  cursor: pointer;
+}
+
+.current-chapter {
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.current-lesson {
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--black);
+  opacity: 1;
+}
+
+.form {
+  margin: 2.313rem 6.25rem 0;
+  border-top: 1px solid var(--white);
+}
+
+.form h2 {
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.input-title,
+.input-author {
+  margin: 1.188rem 5% 0 0;
+  padding: 0.813rem 35% 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--e8);
+  background-color: var(--white-two);
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+}
+
+.input-author {
+  padding: 0.813rem 0.938rem 0.813rem 1rem;
+}
+
+.addButton {
+  width: 12%;
+  height: 2.813rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--azure);
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
 }

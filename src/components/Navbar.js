@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 
 const Navbar = () => (
-  <div className="navbar">
-    <div className="heading">BookStore CMS</div>
-    <div className="links">
-      <ul>
-        <li><Link to="/">Books</Link></li>
-        <li><Link to="/categories">Categories</Link></li>
-      </ul>
+  <div className="flex navbar">
+    <div className="flex section1">
+      <div className="heading">BookStore CMS</div>
+      <div>
+        <ul>
+          <NavLink className="links" to="/">BOOKS</NavLink>
+          <NavLink className="links" to="/categories">CATEGORIES</NavLink>
+        </ul>
+      </div>
     </div>
+    <span><CgProfile className="profile" /></span>
   </div>
 );
 
